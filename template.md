@@ -4,26 +4,14 @@
 
 ---
 
-## Task
+---
+
+## Example 1
 
 ---
 
-## Input Format
+## Example 2
 
 ---
 
-## Output Format
-
----
-
-## Sample Input
-
-<pre>
-</pre>
-
----
-
-## Sample Output
-
-<pre>
-</pre>
+## Constraints
