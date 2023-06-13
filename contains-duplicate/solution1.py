@@ -1,3 +1,5 @@
+# hashmap
+
 class Solution(object):
     def containsDuplicate(self, nums):
         num_set = set()
