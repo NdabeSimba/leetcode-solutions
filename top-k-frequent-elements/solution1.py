@@ -14,7 +14,7 @@ class Solution(object):
 
         return result
 
-
+# says its not the right answer, i get the same result every time.
 
 self = Solution()
 

@@ -1,4 +1,4 @@
-from collections import Counter
+# Heap O(klog(n))
 import heapq
 
 
@@ -21,7 +21,7 @@ class Solution:
 
         res = []
         # push the top k frequent elements to result O(K * log(n))
-        for i in range(k):
+        for _ in range(k):
             res.append(heapq.heappop(listOfOccurences)[1])
         
         return res
