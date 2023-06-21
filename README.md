@@ -1,5 +1,5 @@
 ### LeetCode Solutions
-
+<!--
 | #   | Title                                                                                                                                               | Solution                                                        | Difficulty |
 | --- | --------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------- | ---------- |
 | 1   | [Two Sum](https://leetcode.com/problems/two-sum/)                                                                                                   | [Python](./two-sum/)                                            | Easy       |
@@ -11,4 +11,5 @@
 | 26  | [Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/description/)                               | [Python](./remove-duplicates-from-sorted-array/)                | Easy       |
 | 28  | [Find the Index of the First Occurrence in a String](https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/description/) | [Python](./find-the-index-of-the-first-occurrence-in-a-string/) | Easy       |
 | 66  | [Plus One](https://leetcode.com/problems/plus-one/description/)                                                                                     | [Python](./plus-one/)                                           | Easy       |
-| 217 | [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/description/)                                                                 | [Python](./contains-duplicate/)                                 | Easy       |
+| 217 | [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/description/)                                                                 | [Python](./contains-duplicate/)                                 | Easy       | -->
+
