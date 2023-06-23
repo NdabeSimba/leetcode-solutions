@@ -1,16 +1,10 @@
 class Solution:
     def tribonacci(self, n: int) -> int:
-        num1, num2, num3 = 0, 1, 1
-        result = [0, 1, 1]
-
-        if n <= 2:
-            return result[n]
-
-        for _ in range(3, n + 1):
-            num1, num2, num3 = num2, num3, num1 + num2 + num3
-        
-        return num3
-
+        tri = {0 : 0, 1 : 1, 2 : 1}
+        for i in range(3, n + 1):
+            tri[i] = tri[i - 3] + tri[i - 2] + tri[i - 1]
+        return tri[n]
+    
 
 self = Solution()
 
