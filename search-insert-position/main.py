@@ -1,13 +1,12 @@
 class Solution:
     def searchInsert(self, nums, target: int) -> int:
-        left, right = 0, len(nums)
-        while left < right:
-            mid = (left + right) // 2
-            if nums[mid] < target:
-                left = mid + 1
+        count = 0
+        for num in nums:
+            if num >= target:
+                break
             else:
-                right = mid
-        return left
+                count += 1
+        return count
 
 
 self = Solution()
