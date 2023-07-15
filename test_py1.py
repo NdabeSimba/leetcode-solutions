@@ -1,21 +1,19 @@
 class Solution:
-    def searchInsert(self, nums, target: int) -> int:
-        left, right = 0, len(nums)
-        while left < right:
-            mid = (left + right) // 2
-            if nums[mid] < target:
-                left = mid + 1
-            else:
-                right = mid
-        return left
+    def permute(self, nums: list[int]) -> list[list[int]]:
+        factor = 1
+        for i in range(2, len(nums) + 1):
+            factor *= i
+
+        output = [nums]
+        for _ in range(factor):
+            for place in range(len(nums) - 1):
+                nums[place], nums[place - 1] = nums[place - 1], nums[place]
+                output.append(nums)
+        
+        return output
 
 
 self = Solution()
 
-nums = [1, 3, 5, 6]
-target = 5
-print(Solution.searchInsert(self, nums, target))
-
-nums = [1, 3, 5, 6]
-target = 7
-print(Solution.searchInsert(self, nums, target))
+nums = [1,2,3]
+print(Solution.permute(self, nums))

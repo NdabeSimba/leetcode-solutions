@@ -12,7 +12,7 @@ class Solution:
                 dp[i] = nums[i] + max(dp[i - 3], dp[i - 2])
                 
             return max(dp[-2], dp[-1])
-        # return dp
+        
 
 
 self = Solution()
