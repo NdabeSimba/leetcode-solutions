@@ -1,19 +1,44 @@
 class Solution:
-    def permute(self, nums: list[int]) -> list[list[int]]:
-        factor = 1
-        for i in range(2, len(nums) + 1):
-            factor *= i
+    def repeatedSubstringPattern(self, s: str) -> bool:
+        if len(s) % 2 != 0:
+            return False
 
-        output = [nums]
-        for _ in range(factor):
-            for place in range(len(nums) - 1):
-                nums[place], nums[place - 1] = nums[place - 1], nums[place]
-                output.append(nums)
+        temp_ch = s[0]
+        temp_list = [e + temp_ch for e in s.split(temp_ch) if e]
+
+        if len(temp_list) == 0:
+            return True
         
-        return output
+        temp_word = temp_list.pop()
 
+        print(temp_word)
+
+        while True:
+            if temp_word in temp_list:
+                if temp_list[0] == temp_word:
+                    temp_list.pop()
+                else:
+                    return False
+            else:
+                if len(temp_list) == 0:
+                    return True
+                else:
+                    return False
+        
+        # if temp_list:
+        #     print(temp_list)
+        #     return False
+        # else:
+        #     print(temp_list)
+        #     return True
 
 self = Solution()
 
-nums = [1,2,3]
-print(Solution.permute(self, nums))
+s = "ababab"
+print(Solution.repeatedSubstringPattern(self, s))
+
+s = "babbabbabbabbab"
+print(Solution.repeatedSubstringPattern(self, s))
+
+s = "aba"
+print(Solution.repeatedSubstringPattern(self, s))
