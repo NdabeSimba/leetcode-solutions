@@ -9,7 +9,7 @@ class Solution:
         for j in t:
             t_sum += ord(j)
 
-        result = abs(s_sum - t_sum)
+        result = t_sum - s_sum
         return chr(result)
 
 
