@@ -23,3 +23,20 @@ print(Solution.isAnagram(self, s, t))
 s = "rat"
 t = "car"
 print(Solution.isAnagram(self, s, t))
+
+# Jan 6 2023 submission
+class Solution:
+    def isAnagram(self, s: str, t: str) -> bool:
+        
+        def letters(st):
+            st_dict = dict()
+
+            for l in st:
+                if l in st_dict:
+                    st_dict[l] += 1
+                else:
+                    st_dict[l] = 1
+            
+            return st_dict
+
+        return letters(s) == letters(t)
