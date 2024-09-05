@@ -2,13 +2,16 @@ from typing import List
 
 class Solution:
     def maxProfit(self, prices: List[int]) -> int:
+        # min price
         min_price = prices[0]
-        profit = 0
+
+        # max profit
+        max_profit = 0
 
         for price in prices:
             if min_price > price:
                 min_price = price
-
-            profit = max(profit, price - min_price)
-
-        return profit
+            
+            max_profit = max(max_profit, price - min_price)
+        
+        return max_profit
