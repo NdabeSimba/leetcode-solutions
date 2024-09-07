@@ -9,7 +9,7 @@ class Solution:
     def invertTree(self, root: Optional[TreeNode]) -> Optional[TreeNode]:
         if not root:
             return root
-        
+
         root.left, root.right = self.invertTree(root.right), self.invertTree(root.left)
         return root
 
@@ -17,8 +17,22 @@ class Solution:
     def invertTree(self, root: Optional[TreeNode]) -> Optional[TreeNode]:
         if not root:
             return root
-    
-        temp=root.left
-        root.left=self.invertTree(root.right)
-        root.right=self.invertTree(temp)
+
+        temp = root.left
+        root.left = self.invertTree(root.right)
+        root.right = self.invertTree(temp)
         return root
+
+    # 3
+    def invertTree(self, root: Optional[TreeNode]) -> Optional[TreeNode]:
+        if root:
+            left = root.left
+            right = root.right
+
+            root.left = right
+            root.right = left
+
+            self.invertTree(root.left)
+            self.invertTree(root.right)
+
+            return root
